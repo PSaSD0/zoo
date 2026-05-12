@@ -12,3 +12,4 @@ Route::get('/home', action: [App\Http\Controllers\HomeController::class, 'index'
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/articles', [App\Http\Controllers\WebController::class, 'articles'])->name('articles');
