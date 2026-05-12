@@ -42,7 +42,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="">Полезные статьи</a>
+                            <a class="nav-link" href="{{ route('articles') }}">Полезные статьи</a>
                         </li>
 
                         <li class="nav-item">
@@ -102,7 +102,7 @@
                 <li class="nav-item"><a href="{{ url('/') }}" class="nav-link px-2 text-muted">Главная</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Каталог</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Акции</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Полезные статьи</a></li>
+                <li class="nav-item"><a href="{{ route('articles') }}" class="nav-link px-2 text-muted">Полезные статьи</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Контакты</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQ</a></li>
             </ul>
