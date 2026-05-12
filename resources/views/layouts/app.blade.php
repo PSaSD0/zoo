@@ -97,7 +97,7 @@
             </div>
         </main>
 
-        <footer class="py-3 my-4 card rounded-0 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+        <footer class="py-3 my-4 card rounded-0 shadow-sm p-3 mb-0 bg-body-tertiary rounded">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item"><a href="{{ url('/') }}" class="nav-link px-2 text-muted">Главная</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Каталог</a></li>
