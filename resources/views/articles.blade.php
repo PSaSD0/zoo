@@ -14,11 +14,10 @@
                     <div class="card-body ">
                         <h5 class="card-title text-dark">{{ $a->title }}</h5>
                         <p class="card-text text-dark">{{ $a->created_at }}</p>
-                        <a href="" class="btn btn-outline-primary btn-sm mt-4">Читать</a>
+                        <a href="{{ route('article', $a->id) }}" class="btn btn-outline-primary btn-sm mt-4">Читать</a>
                     </div>
                 </div>
             </div>
-
             @endforeach
         </div>
     </div>
