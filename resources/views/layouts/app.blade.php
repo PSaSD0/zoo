@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="">Каталог</a>
+                            <a class="nav-link" href="{{ route('catalog') }}">Каталог</a>
                         </li>
 
                         <li class="nav-item">
@@ -108,7 +108,7 @@
         <footer class="py-3 my-4 card rounded-0 shadow-sm p-3 mb-0 bg-body-tertiary rounded">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item"><a href="{{ url('/') }}" class="nav-link px-2 text-muted">Главная</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Каталог</a></li>
+                <li class="nav-item"><a href="{{ route('catalog') }}" class="nav-link px-2 text-muted">Каталог</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Акции</a></li>
                 <li class="nav-item"><a href="{{ route('articles') }}" class="nav-link px-2 text-muted">Полезные статьи</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Контакты</a></li>

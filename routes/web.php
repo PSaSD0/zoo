@@ -12,6 +12,8 @@ Route::get('/home', action: [App\Http\Controllers\HomeController::class, 'index'
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/catalog', [App\Http\Controllers\WebController::class, 'catalog'])->name('catalog');
+Route::get('/card/{id}', [App\Http\Controllers\WebController::class, 'card'])->name('card');
 Route::get('/articles', [App\Http\Controllers\WebController::class, 'articles'])->name('articles');
 Route::get('/article/{id}', [App\Http\Controllers\WebController::class, 'article'])->name('article');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
