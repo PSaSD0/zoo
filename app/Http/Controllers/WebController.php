@@ -12,13 +12,18 @@ class WebController extends Controller
         $array = DB::table('articles')->get();
         return view('articles', compact('array'));
     }
-
     public function article($id)
     {
         $article = DB::table('articles')->where('id', '=', $id)->first();
         return view('article', compact('article'));
     }
 
+    public function contacts()
+    {
+        $contacts = DB::table('contacts')->get();
+        return view('contacts', compact('contacts'));
+    }
+  
     public function catalog(Request $request)
     {
         $sort = $request->sort;
@@ -51,3 +56,4 @@ class WebController extends Controller
         return view('card', compact('card'));
     }
 }
+
