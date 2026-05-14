@@ -2,16 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/home', action: [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', action: [App\Http\Controllers\WebController::class, 'home'])->name('index');
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/reviews', [App\Http\Controllers\WebController::class, 'store'])->name('reviews.store');
 Route::get('/catalog', [App\Http\Controllers\WebController::class, 'catalog'])->name('catalog');
 Route::get('/card/{id}', [App\Http\Controllers\WebController::class, 'card'])->name('card');
 Route::get('/articles', [App\Http\Controllers\WebController::class, 'articles'])->name('articles');

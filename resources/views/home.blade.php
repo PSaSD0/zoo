@@ -60,4 +60,63 @@
                 width="100%">
         </div>
     </div>
+    <div class="row align-items-stretch p-3">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 ps-1 pt-2 m-1">
+            <h4 class="ms-2">Отзывы</h4>
+            <div class="overflow-auto" style="max-height: 400px;">
+                @foreach ($reviews as $review)
+                    <div class="card ps-2 pt-2 m-2 review-item mb-3">
+                        <p class="mb-1">
+                            <strong>{{ $review->user_name }}</strong><br>
+                            {{ $review->rating }}<span class="text-warning">★</span><br>
+                            {{ $review->comment }}
+                        </p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+    <div class="card h-100 ps-2 pt-2 m-1">
+        <h4 class="ms-2">Оставить отзыв</h4>
+        <div class="d-flex flex-column h-100">
+            <form method="POST" action="{{ route('reviews.store') }}" class="h-100">
+                @csrf
+                <div class="d-flex flex-column h-100 ps-2 pt-2 m-1">
+                    <div class="mb-3">
+                        <label for="comment" class="form-label fw-semibold">Напишите отзыв</label>
+                        <textarea class="form-control"
+                                  id="comment"
+                                  name="comment"
+                                  rows="4"
+                                  placeholder="Расскажите о вашем опыте..."
+                                  required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="rating" class="form-label fw-semibold">Оценка</label>
+                        <select class="form-select" id="rating" name="rating" required>
+                            <option value="">Выберите оценку</option>
+                            <option value="1">1 ★</option>
+                            <option value="2">2 ★★</option>
+                            <option value="3">3 ★★★</option>
+                            <option value="4">4 ★★★★</option>
+                            <option value="5">5 ★★★★★</option>
+                        </select>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-2 pt-3">
+                        <button type="submit" class="btn btn-primary px-4 py-2">
+                            Оставить отзыв
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
 @endsection

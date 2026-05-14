@@ -4,9 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class WebController extends Controller
 {
+        public function home()
+    {
+        $reviews = DB::table('reviews')
+            ->join('users', 'reviews.id_user', '=', 'users.id')
+            ->select('reviews.*', 'users.name as user_name')
+            ->limit(3)
+            ->orderBy('id', 'desc')
+            ->get();
+        return view('home', compact('reviews'));
+    }
+
+    public function store(Request $request)
+    {
+        $userId = Auth::check() ? Auth::id() : 1;
+
+        DB::table('reviews')->insert([
+            'id_user' => $userId,
+            'comment' => $request->comment,
+            'rating' => $request->rating,
+            'created_at' => now(),
+        ]);
+
+        return redirect('/')->with('success', 'Спасибо за отзыв!');
+    }
+
     public function articles()
     {
         $array = DB::table('articles')->get();
@@ -23,7 +49,7 @@ class WebController extends Controller
         $contacts = DB::table('contacts')->get();
         return view('contacts', compact('contacts'));
     }
-  
+
     public function catalog(Request $request)
     {
         $sort = $request->sort;
