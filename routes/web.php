@@ -33,4 +33,3 @@ Route::post('/editNumber', [App\Http\Controllers\AdminController::class, 'editNu
 Route::post('/editEmail', [App\Http\Controllers\AdminController::class, 'editEmail'])->name('editEmail');
 Route::post('/editAdress', [App\Http\Controllers\AdminController::class, 'editAdress'])->name('editAdress');
 Route::post('/editMap', [App\Http\Controllers\AdminController::class, 'editMap'])->name('editMap');
-
