@@ -36,11 +36,24 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $a->title }}</h5>
                             <p class="card-text">{{ $a->price }} ₽</p>
-                            <a href="{{ route('card', $a->id) }}" class="btn btn-primary">Перейти</a>
+                            <a href="{{ route('card', $a->id) }}" class="btn btn-primary mb-2">Перейти</a>
+                            @auth
+                                @if(Auth::user()->id_role == 2)
+                                    <br><a href="{{ route('editProductView',['id'=>$a->id]) }}" class="btn btn-outline-primary btn-sm mb-2">Редактировать товар</a>
+
+                                    <form action="{{ route('dellProduct') }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input type="hidden" name="id" value="{{ $a->id }}">
+                                        <button type="submit" class="btn btn-danger btn-sm">Удалить</button>
+                                    </form>
+                                @endif
+                            @endauth
                         </div>
                     </div>
                 </div>
             @endforeach
+            <p>{{ session('messageDellProduct') }}</p>
         </div>
     </div>
 @endsection

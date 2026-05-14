@@ -21,8 +21,20 @@ Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])-
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
 
 Route::post('/addProduct', [App\Http\Controllers\AdminController::class, 'addProduct'])->name('addProduct');
+Route::delete('/dellProduct', [App\Http\Controllers\AdminController::class, 'dellProduct'])->name('dellProduct');
+Route::get('/editProductView/{id}', [App\Http\Controllers\AdminController::class, 'editProductView'])->name('editProductView');
+Route::post('/editProduct/{id}', [App\Http\Controllers\AdminController::class, 'editProduct'])->name('editProduct');
 
 Route::post('/addCategory', [App\Http\Controllers\AdminController::class, 'addCategory'])->name('addCategory');
 Route::delete('/dellCategory', [App\Http\Controllers\AdminController::class, 'dellCategory'])->name('dellCategory');
 
 Route::post('/addArticle', [App\Http\Controllers\AdminController::class, 'addArticle'])->name('addArticle');
+Route::delete('/dellArticle', [App\Http\Controllers\AdminController::class, 'dellArticle'])->name('dellArticle');
+Route::get('/editArticleView/{id}', [App\Http\Controllers\AdminController::class, 'editArticleView'])->name('editArticleView');
+Route::post('/editArticle/{id}', [App\Http\Controllers\AdminController::class, 'editArticle'])->name('editArticle');
+
+Route::post('/editNumber', [App\Http\Controllers\AdminController::class, 'editNumber'])->name('editNumber');
+Route::post('/editEmail', [App\Http\Controllers\AdminController::class, 'editEmail'])->name('editEmail');
+Route::post('/editAdress', [App\Http\Controllers\AdminController::class, 'editAdress'])->name('editAdress');
+Route::post('/editMap', [App\Http\Controllers\AdminController::class, 'editMap'])->name('editMap');
+
