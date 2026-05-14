@@ -12,4 +12,10 @@ class WebController extends Controller
         $array = DB::table('articles')->get();
         return view('articles', compact('array'));
     }
+    public function contacts()
+    {
+        $contacts = DB::table('contacts')->get();
+        return view('contacts', compact('contacts'));
+    }
 }
+
