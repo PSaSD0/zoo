@@ -14,7 +14,7 @@
                 <input class="form-control" type="text" id="email" name="email" value="{{ $user->email }}">
 
                 <button type="submit" class="btn btn-primary mt-3">Сохранить</button>
-                <a href="{{ route('profile') }}" class="btn btn-link mt-3">вернуться</a>
+                <a href="{{ route('profile', ['id' => Auth::id()]) }}" class="btn btn-link mt-3">вернуться</a>
                 <p>{{ session('messageEditProfile') }}</p>
             </div>
         </div>

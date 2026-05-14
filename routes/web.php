@@ -13,6 +13,7 @@ Route::get('/card/{id}', [App\Http\Controllers\WebController::class, 'card'])->n
 Route::get('/articles', [App\Http\Controllers\WebController::class, 'articles'])->name('articles');
 Route::get('/article/{id}', [App\Http\Controllers\WebController::class, 'article'])->name('article');
 Route::get('/contacts', [App\Http\Controllers\WebController::class, 'contacts'])->name('contacts');
+Route::get('/profile/{id}', [App\Http\Controllers\WebController::class, 'profile'])->name('profile');
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])->name('search');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
 
@@ -34,3 +35,5 @@ Route::post('/editEmail', [App\Http\Controllers\AdminController::class, 'editEma
 Route::post('/editAdress', [App\Http\Controllers\AdminController::class, 'editAdress'])->name('editAdress');
 Route::post('/editMap', [App\Http\Controllers\AdminController::class, 'editMap'])->name('editMap');
 
+Route::get('/editProfileView/{id}', [App\Http\Controllers\WebController::class, 'editProfileView'])->name('editProfileView');
+Route::post('/editProfile/{id}', [App\Http\Controllers\WebController::class, 'editProfile'])->name('editProfile');

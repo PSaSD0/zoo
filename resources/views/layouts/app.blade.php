@@ -76,7 +76,7 @@
                                         <a class="dropdown-item" href="{{ route('admin') }}">Админ панель</a>
                                     @endif
 
-                                    <a class="dropdown-item" href="">Профиль</a>
+                                    <a class="dropdown-item" href="{{ route('profile', ['id' => Auth::id()]) }}">Профиль</a>
 
                                     <a class="dropdown-item" href="">Корзина</a>
 
