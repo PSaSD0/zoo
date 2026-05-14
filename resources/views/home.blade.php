@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="row align-items-center mb-5">
         <div class="col-lg-6 mb-4 mb-lg-0">
-            <h2 class="display-5 fw-bold mb-3">Кто такие Zoo?</h2>
+            <h1 class="display-5 fw-bold mb-3">Кто такие Zoo?</h1>
             <p>Мы — небольшой магазин лакомств для собак и кошек. Нас несколько человек, и у каждого дома живёт кто-то с хвостом. Поэтому мы подходим к выбору товаров так, как будто покупаем для себя.</p>
 
             <div class="mt-4">
@@ -41,11 +40,10 @@
             <p>Склад и офис в Москве. Забрать заказ самовывозом можно по предварительной договорённости — пишите в чат или в мессенджеры, договоримся на удобное время.</p>
         </div>
         <div class="col-md-6 text-center">
-                <div style="position:relative;overflow:hidden;">
-                    <a href="https://yandex.ru/maps/org/plov_burger/62990377548/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Плов & Бургер</a>
-                    <a href="https://yandex.ru/maps/213/moscow/category/cafe/184106390/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Кафе в Москве</a>
-                    <iframe src="https://yandex.ru/map-widget/v1/?ll=37.658430%2C55.699924&mode=poi&poi%5Bpoint%5D=37.657537%2C55.700127&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D62990377548&z=16.6" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;" class="rounded-4"></iframe>
-                </div>
+            <img src="{{ asset($contacts->image) }}"
+                alt="{{ asset($contacts->adress) }}"
+                class="img-fluid rounded-4 shadow"
+                width="100%">
     </div>
 
     <div class="row align-items-center my-5 py-3">

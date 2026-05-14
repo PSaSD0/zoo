@@ -92,6 +92,10 @@
                                 </div>
                             </li>
                         @endguest
+
+                        <li class="nav-item">
+                            <a class="btn btn-outline-secondary btn-small" href="tel:+{{ $contacts->number }}">Позвонить менеджеру</a>
+                        </li>
                     </ul>
                 </div>
             </div>
