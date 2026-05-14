@@ -72,6 +72,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    @if(Auth::user()->id_role==2)
+                                        <a class="dropdown-item" href="{{ route('admin') }}">Админ панель</a>
+                                    @endif
+
                                     <a class="dropdown-item" href="">Профиль</a>
 
                                     <a class="dropdown-item" href="">Корзина</a>
