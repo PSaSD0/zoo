@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             @foreach ($array as $a)
-            <div class="col">
+            <div class="col-md-3 col-sm-5 mb-4">
                 <div class="card h-100">
                     <div class="text-center p-0" style="height: 220px;">
                         <img src="{{ asset($a->image) }}" alt="{{ $a->title }}" class="card-img-top" style="height: 100%">
