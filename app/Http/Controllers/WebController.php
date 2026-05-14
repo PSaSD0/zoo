@@ -84,5 +84,31 @@ class WebController extends Controller
         $card = DB::table('products')->where('id', '=', $id)->first();
         return view('card', compact('card'));
     }
+
+    public function profile($id)
+    {
+        if(Auth::user()){
+            $user = DB::table('users')->where('id', '=', $id)->first();
+            return view('profile', compact('user'));
+        }
+        else{
+            return redirect('login');
+        }
+    }
+
+    public function editProfileView($id)
+    {
+        $user = DB::table('users')->where('id', '=', $id)->first();
+        return view('editProfileView', compact('user'));
+    }
+
+    public function editProfile($id, Request $request)
+    {
+        DB::table('users')->where('id', '=', $id)->update([
+            'name' => $request->name,
+            'email' => $request->email
+        ]);
+        return redirect()->back()->with('messageEditProfile', 'Данные успешно обновлены!');
+    }
 }
 
