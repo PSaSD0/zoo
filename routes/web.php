@@ -17,6 +17,7 @@ Route::get('/card/{id}', [App\Http\Controllers\WebController::class, 'card'])->n
 Route::get('/articles', [App\Http\Controllers\WebController::class, 'articles'])->name('articles');
 Route::get('/article/{id}', [App\Http\Controllers\WebController::class, 'article'])->name('article');
 Route::get('/contacts', [App\Http\Controllers\WebController::class, 'contacts'])->name('contacts');
+Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])->name('search');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
 
 Route::post('/addProduct', [App\Http\Controllers\AdminController::class, 'addProduct'])->name('addProduct');
