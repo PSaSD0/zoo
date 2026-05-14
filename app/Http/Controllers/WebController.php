@@ -8,15 +8,18 @@ use Illuminate\Support\Facades\Auth;
 
 class WebController extends Controller
 {
-        public function home()
+    public function home()
     {
+        $contacts = DB::table('contacts')->first();
+
         $reviews = DB::table('reviews')
             ->join('users', 'reviews.id_user', '=', 'users.id')
             ->select('reviews.*', 'users.name as user_name')
             ->limit(3)
             ->orderBy('id', 'desc')
             ->get();
-        return view('home', compact('reviews'));
+
+        return view('home', compact('reviews', 'contacts'));
     }
 
     public function store(Request $request)
@@ -46,7 +49,7 @@ class WebController extends Controller
 
     public function contacts()
     {
-        $contacts = DB::table('contacts')->get();
+        $contacts = DB::table('contacts')->first();
         return view('contacts', compact('contacts'));
     }
 
