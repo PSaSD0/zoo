@@ -14,10 +14,10 @@
                     <div class="card-body ">
                         <h5 class="card-title text-dark">{{ $a->title }}</h5>
                         <p class="card-text text-dark">{{ $a->created_at }}</p>
-                        <a href="{{ route('article', $a->id) }}" class="btn btn-outline-primary btn-sm mt-4 mb-2">Читать</a>
+                        <a href="{{ route('article', $a->id) }}" class="btn btn-outline-success btn-sm mt-4 mb-2">Читать</a>
                         @auth
                             @if(Auth::user()->id_role == 2)
-                                <br><a href="{{ route('editArticleView',['id'=>$a->id]) }}" class="btn btn-outline-primary btn-sm mb-2">Редактировать статью</a>
+                                <br><a href="{{ route('editArticleView',['id'=>$a->id]) }}" class="btn btn-outline-secondary btn-sm mb-2">Редактировать статью</a>
 
                                 <form action="{{ route('dellArticle') }}" method="post">
                                     @csrf

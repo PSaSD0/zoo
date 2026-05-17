@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="d-flex justify-content-center mt-2 pt-3">
-                        <button type="submit" class="btn btn-primary px-4 py-2">
+                        <button type="submit" class="btn btn-success px-4 py-2">
                             Оставить отзыв
                         </button>
                     </div>

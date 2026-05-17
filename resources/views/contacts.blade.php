@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="d-flex card p-2 m-1">
+    <div class="d-flex card p-2 m-1 bg-success-subtle">
         <h1 class="ms-2">Контакты</h1>
         <div class="col">
             <div class="card p-2 m-1">
@@ -13,7 +13,7 @@
                             @csrf
                             <label class="form-label" for="number">Редактировать номер телефона</label>
                             <input class="form-control" type="text" id="number" name="number">
-                            <button type="submit" class="btn btn-primary mt-2">Сохранить</button>
+                            <button type="submit" class="btn btn-success mt-2">Сохранить</button>
                             <p>{{ session('messageEditNumber') }}</p>
                         </form>
                     @endif
@@ -28,7 +28,7 @@
                             @csrf
                             <label class="form-label" for="email">Редактировать электронную почту</label>
                             <input class="form-control" type="text" id="email" name="email">
-                            <button type="submit" class="btn btn-primary mt-2">Сохранить</button>
+                            <button type="submit" class="btn btn-success mt-2">Сохранить</button>
                             <p>{{ session('messageEditEmail') }}</p>
                         </form>
                     @endif
@@ -43,7 +43,7 @@
                             @csrf
                             <label class="form-label" for="adress">Редактировать адрес</label>
                             <input class="form-control" type="text" id="adress" name="adress">
-                            <button type="submit" class="btn btn-primary mt-2">Сохранить</button>
+                            <button type="submit" class="btn btn-success mt-2">Сохранить</button>
                             <p>{{ session('messageEditAdress') }}</p>
                         </form>
                     @endif
@@ -57,7 +57,7 @@
                             @csrf
                             <label class="form-label mt-3" for="image">Изменить фото</label>
                             <input class="form-control" type="file" id="image" name="image" accept="image/*">
-                            <button type="submit" class="btn btn-primary mt-2">Сохранить</button>
+                            <button type="submit" class="btn btn-success mt-2">Сохранить</button>
                             <p>{{ session('messageEditMap') }}</p>
                         </form>
                     @endif

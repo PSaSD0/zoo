@@ -23,7 +23,7 @@
                     <option value="{{ $a->id}}" {{ request('category') == $a->id ? 'selected' : '' }}>{{ $a->title }}</option>
                 @endforeach
             </select>
-            <button type="submit" class="btn btn-success m-5">Отфильтровать</button>
+            <button type="submit" class="btn btn-outline-success m-5">Отфильтровать</button>
         </div>
     </form>
 
@@ -36,10 +36,10 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $a->title }}</h5>
                             <p class="card-text">{{ $a->price }} ₽</p>
-                            <a href="{{ route('card', $a->id) }}" class="btn btn-primary mb-2">Перейти</a>
+                            <a href="{{ route('card', $a->id) }}" class="btn btn-success mb-2">Перейти</a>
                             @auth
                                 @if(Auth::user()->id_role == 2)
-                                    <br><a href="{{ route('editProductView',['id'=>$a->id]) }}" class="btn btn-outline-primary btn-sm mb-2">Редактировать товар</a>
+                                    <br><a href="{{ route('editProductView',['id'=>$a->id]) }}" class="btn btn-outline-secondary btn-sm mb-2">Редактировать товар</a>
 
                                     <form action="{{ route('dellProduct') }}" method="post">
                                         @csrf

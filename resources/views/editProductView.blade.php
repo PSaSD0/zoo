@@ -29,7 +29,7 @@
                 <label class="form-label mt-3" for="costProduct">Цена товара</label>
                 <input class="form-control" type="text" id="costProduct" name="costProduct" value="{{ $product->price }}">
 
-                <button type="submit" class="btn btn-primary mt-3">Сохранить</button>
+                <button type="submit" class="btn btn-success mt-3">Сохранить</button>
                 <p>{{ session('messageEditProduct') }}</p>
             </div>
         </div>

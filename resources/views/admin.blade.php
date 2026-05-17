@@ -10,7 +10,7 @@
                 <h5 class="card-title">Добавление категории</h5>
                 <label for="nameCategory" class="form-label">Название категории</label>
                 <input type="text" class="form-control mb-4" id="nameCategory" name="nameCategory" required>
-                <button type="submit" class="btn btn-primary">Добавить</button>
+                <button type="submit" class="btn btn-success">Добавить</button>
                 <p>{{ session('messageAddCategory') }}</p>
             </div>
         </div>
@@ -58,7 +58,7 @@
                 <label for="priceProduct" class="form-label">Цена товара</label>
                 <input type="text" class="form-control mb-4" id="priceProduct" name="priceProduct" required>
 
-                <button type="submit" class="btn btn-primary">Добавить</button>
+                <button type="submit" class="btn btn-success">Добавить</button>
                 <p>{{ session('messageAddProduct') }}</p>
             </div>
         </div>
@@ -79,7 +79,7 @@
                 <label for="descriptionArticle" class="form-label">Описание статьи</label>
                 <textarea type="text" rows="10" class="form-control mb-4" id="descriptionArticle" name="descriptionArticle" required></textarea>
 
-                <button type="submit" class="btn btn-primary">Добавить</button>
+                <button type="submit" class="btn btn-success">Добавить</button>
                 <p>{{ session('messageAddArticle') }}</p>
             </div>
         </div>

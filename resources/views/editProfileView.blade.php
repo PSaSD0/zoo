@@ -13,7 +13,7 @@
                 <label class="form-label mt-3" for="email">email</label>
                 <input class="form-control" type="text" id="email" name="email" value="{{ $user->email }}">
 
-                <button type="submit" class="btn btn-primary mt-3">Сохранить</button>
+                <button type="submit" class="btn btn-success mt-3">Сохранить</button>
                 <a href="{{ route('profile', ['id' => Auth::id()]) }}" class="btn btn-link mt-3">вернуться</a>
                 <p>{{ session('messageEditProfile') }}</p>
             </div>
