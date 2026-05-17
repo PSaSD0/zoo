@@ -116,7 +116,7 @@
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Акции</a></li>
                 <li class="nav-item"><a href="{{ route('articles') }}" class="nav-link px-2 text-muted">Полезные статьи</a></li>
                 <li class="nav-item"><a href="{{ route('contacts') }}" class="nav-link px-2 text-muted">Контакты</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQ</a></li>
+                <li class="nav-item"><a href="{{ route('faq') }}" class="nav-link px-2 text-muted">FAQ</a></li>
             </ul>
             <p class="text-center text-muted">© 2026 Zoo</p>
         </footer>

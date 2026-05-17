@@ -53,6 +53,11 @@ class WebController extends Controller
         return view('contacts', compact('contacts'));
     }
 
+    public function faq()
+    {
+        return view('faq');
+    }
+
     public function catalog(Request $request)
     {
         $sort = $request->sort;

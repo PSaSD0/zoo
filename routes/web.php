@@ -14,6 +14,7 @@ Route::get('/articles', [App\Http\Controllers\WebController::class, 'articles'])
 Route::get('/article/{id}', [App\Http\Controllers\WebController::class, 'article'])->name('article');
 Route::get('/contacts', [App\Http\Controllers\WebController::class, 'contacts'])->name('contacts');
 Route::get('/profile/{id}', [App\Http\Controllers\WebController::class, 'profile'])->name('profile');
+Route::get('/faq', [App\Http\Controllers\WebController::class, 'faq'])->name('faq');
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])->name('search');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
 
